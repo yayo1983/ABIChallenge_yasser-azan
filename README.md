@@ -1,12 +1,12 @@
 # ABIChallenge_yasser-azan
 
-# FastAPI Project with MVP Pattern
+# FastAPI Project with MVP Pattern for challenge
 
 This is a FastAPI project structured using the MVP (Model-View-Presenter) pattern.
 
 ## Project Structure
-
-my_fastapi_app/
+```sh
+api ML /
 ├── app/
 │ ├── init.py
 │ ├── main.py
@@ -26,7 +26,7 @@ my_fastapi_app/
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
-
+```
 ## Solution architecture
 View of the solution by components
 ![View of the solution by components](diag_arq.png)
@@ -56,10 +56,11 @@ uvicorn app.main:app --reload
 
 3. Using endpoints
    API Endpoints
+   ```sh
    GET /: Presentation of project.
    GET /loaddata/: Load data from excel and clean and save in sqlite database 
    GET /unique_variables/: unique_variables  Get the number of unique values ​​per column
    GET /count_by_product/: Examining how many of each product are
    GET /interpreting_data/ data to analize the results
-   
+   ```
 
