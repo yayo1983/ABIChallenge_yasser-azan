@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+
+# IDEs
+.vscode/
+.idea/
+
+# Compiled Python files
+*.pyc
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Output of Python unittests
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
