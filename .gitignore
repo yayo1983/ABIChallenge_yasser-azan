@@ -19,7 +19,7 @@ venv/
 *.sqlite3
 
 # Output of Python unittests
-__pycache__/
+*__pycache__
 *.pyc
 
 # macOS
@@ -29,3 +29,12 @@ __pycache__/
 Thumbs.db
 
 sonar-project.properties
+*.properties
+
+*.tmp
+
+# Ignore editor backup files
+*~
+
+# Ignore virtual environment
+env/

@@ -52,5 +52,10 @@ uvicorn app.main:app --reload
 
 3. Using endpoints
    API Endpoints
-   GET /: Retrieve an item default for example.
-   GET /items/{item_id}: Retrieve an item by its ID.
+   GET /: Presentation of project.
+   GET /loaddata/: Load data from excel and clean and save in sqlite database 
+   GET /unique_variables/: unique_variables  Get the number of unique values ​​per column
+   GET /count_by_product/: Examining how many of each product are
+   GET /interpreting_data/ data to analize the results
+   
+

@@ -1,12 +1,16 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes.item_route import ItemRouter
+from app.database import Base, engine
 
 class MainApp:
     """
     MyApp class encapsulates the setup and configuration of the FastAPI application.
     """
     def __init__(self):
+        # Create all tables
+        Base.metadata.create_all(bind=engine)
+        
         # Initialize FastAPI application
         self.app = FastAPI(
             title="MLOps Challenge v7",
