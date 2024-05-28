@@ -49,5 +49,3 @@ class MainApp:
 
 my_app = MainApp()
 app = my_app.app
-
-
