@@ -27,6 +27,10 @@ my_fastapi_app/
 ├── requirements.txt
 └── README.md
 
+## Solution architecture
+View of the solution by components
+![View of the solution by components](diag_arq.png)
+
 ## Running the Project
 
 ### Using Docker Compose
