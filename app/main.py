@@ -1,11 +1,17 @@
 from fastapi import FastAPI
-from app.routes import item_route
+from app.routes.item_route import ItemRouter
 
 app = FastAPI()
 
-app.include_router(item_route.router)
+class MainApp:
+    def __init__(self, app):
+        self.app = app
+        self.setup_routes()
 
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to FastAPI with MVP Pattern"}
+    def setup_routes(self):
+        item_router = ItemRouter()
+        self.app.include_router(item_router.router)
+
+MainApp(app)
+
 

@@ -5,3 +5,6 @@ class Item(BaseModel):
     name: str
     description: str
     price: float
+    
+class ItemDefault(BaseModel):
+    pass
