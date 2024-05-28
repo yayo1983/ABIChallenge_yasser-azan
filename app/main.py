@@ -1,11 +1,11 @@
 from fastapi import FastAPI
+from app.routes import item_route
 
 app = FastAPI()
 
+app.include_router(item_route.router)
+
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"message": "Welcome to FastAPI with MVP Pattern"}
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: str = None):
-    return {"item_id": item_id, "q": q}
