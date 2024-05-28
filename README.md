@@ -10,6 +10,10 @@ api ML /
 ├── app/
 │ ├── init.py
 │ ├── main.py
+│ ├── database.py
+├── schemas/
+│ │ └── init.py
+│ │ └── item.py
 │ ├── models/
 │ │ └── init.py
 │ │ └── item.py
@@ -22,6 +26,10 @@ api ML /
 │ ├── routes/
 │ │ └── init.py
 │ │ └── item_route.py
+│ ├── tests/
+│ │ └── init.py
+│ │ └── unit/
+│ │ └── └── test_item_presenter.py/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
