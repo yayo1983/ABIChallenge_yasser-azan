@@ -4,6 +4,11 @@
 
 This is a FastAPI project structured using the MVP (Model-View-Presenter) pattern.
 
+## General Presentation 
+Presentation of the project
+[Presentation of the project](https://docs.google.com/presentation/d/1x_46V4ajwEiaxK5rH2E7LBrPh0ZCeNinP_iAnqXtw6s/edit#slide=id.gc6f80d1ff_0_0)
+
+
 ## Project Structure
 ```sh
 api ML /
