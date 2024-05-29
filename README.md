@@ -29,7 +29,7 @@ api ML /
 │ ├── tests/
 │ │ └── init.py
 │ │ └── unit/
-│ │ └── └── test_item_presenter.py/
+│ │ ── └── test_item_presenter.py/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
@@ -38,6 +38,10 @@ api ML /
 ## Solution architecture
 View of the solution by components
 ![View of the solution by components](diag_arq.png)
+
+You can access to edit the UML online in the following link
+[You can access to edit the UML online in the following link](https://app.diagrams.net/?libs=general;uml#G1JxFIrjq3AOS-7ThH6TevdW00CMWJ6ZdC#%7B%22pageId%22%3A%22b5b7bab2-c9e2-2cf4-8b2a-24fd1a2a6d21%22%7D)
+
 
 ## Running the Project
 
@@ -72,3 +76,21 @@ uvicorn app.main:app --reload
    GET /interpreting_data/ data to analize the results
    ```
 
+## Running the tests
+
+To run all the tests you only need
+```sh
+pytest
+```
+
+If you want to run only one test file, you can put the file name as follows:
+
+```sh
+pytest tests/unit/test_item_presenter.py
+```
+
+Execute specific function test
+
+```sh
+pytest test_item_view.py::test_load_data_success
+```
