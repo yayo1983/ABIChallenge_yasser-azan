@@ -38,3 +38,5 @@ sonar-project.properties
 
 # Ignore virtual environment
 env/
+
+mlruns
