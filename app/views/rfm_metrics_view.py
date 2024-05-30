@@ -1,7 +1,10 @@
 from pandas import DataFrame
 import pandas as pd
+from pandas import Timestamp
 import datetime as dt
-
+import mlflow
+import mlflow.sklearn
+from sklearn.preprocessing import OneHotEncoder
 class RFMMetricView:
     def interpreting_data(self, df: DataFrame):
         today_date = dt.datetime(2009, 11, 12)
@@ -21,10 +24,20 @@ class RFMMetricView:
         rfm["monetary_score"] = pd.cut(rfm['monetary'], 5, labels=[1, 2, 3, 4, 5])
         # The designation of the recency_score and frequency_score variables as the RFM_SCORE variable.
         rfm["RFM_SCORE"] = (rfm['recency_score'].astype(str) + rfm['frequency_score'].astype(str))
-        rfm = self.creating_segment(rfm)
-        # Let's group our dataframe by segment and look at the averages of the RFM scores.
-        rfm[["segment", "recency", "frequency", "monetary"]].groupby("segment").agg(["mean", "count"])
-        print(rfm)
+        exp = mlflow.set_experiment(experiment_name="experment_1")
+        with mlflow.start_run(experiment_id=exp.experiment_id):
+            rfm = self.creating_segment(rfm)
+            # Let's group our dataframe by segment and look at the averages of the RFM scores.
+            rfm[["segment", "recency", "frequency", "monetary"]].groupby("segment").agg(["mean", "count"])
+            print(rfm)
+            mlflow.log_param("recency", rfm["recency"].to_string())
+            mlflow.log_param("frequency", rfm["frequency"].to_string())
+            mlflow.log_param("monetary", rfm["monetary"].to_string())
+            mlflow.log_metric("recency_score", 90.0)
+
+            # mlflow.log_metric("frequency_score", rfm["frequency_score"].to_string()) 
+            # mlflow.log_metric("RFM_SCORE", rfm["RFM_SCORE"].to_string())    
+            mlflow.sklearn.log_model(rfm, "rfm_model")
         return rfm
     
     
