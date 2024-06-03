@@ -40,3 +40,5 @@ sonar-project.properties
 env/
 
 mlruns
+
+mytracks

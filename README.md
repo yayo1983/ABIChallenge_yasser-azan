@@ -99,3 +99,9 @@ Execute specific function test
 ```sh
 pytest test_item_view.py::test_load_data_success
 ```
+
+## Command for see MLflow UI
+
+```sh
+mlflow ui
+```
