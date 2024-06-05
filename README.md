@@ -105,3 +105,9 @@ pytest test_item_view.py::test_load_data_success
 ```sh
 mlflow ui
 ```
+
+## Command for run ML project using MLproject.py
+
+```sh
+mlflow run .
+```
