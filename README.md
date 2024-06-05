@@ -111,3 +111,9 @@ mlflow ui
 ```sh
 mlflow run .
 ```
+
+## Run ML project using mlflow.projects.run
+
+```sh
+python3 run.py
+```

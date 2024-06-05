@@ -8,4 +8,4 @@ docker_env:
 
 entry_points:
   app:
-    command: "python3 app.main.py"
+    command: "uvicorn app.main:app"
