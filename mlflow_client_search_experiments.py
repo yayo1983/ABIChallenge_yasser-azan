@@ -7,7 +7,7 @@ mlflow.set_tracking_uri("http://127.0.0.1:5000")
 client = MlflowClient()
 
 experiments = client.search_experiments(view_type=ViewType.ALL,
-                                        filter_string="tags.`version` = 'v1' AND tags.`framework` = 'sklearn'",
+                                       # filter_string="tags.`version` = 'v1' AND tags.`framework` = 'sklearn'",
                                         order_by=["experiment_id ASC"]
                                         )
 
