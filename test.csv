@@ -1,0 +1,3 @@
+run_id,experiment_id,status,artifact_uri,start_time,end_time,tags.Priority,tags.Version,tags.mlflow.runName
+2f15444fd26d40ee901c516b00555d46,274137987748593680,RUNNING,file:///home/yasser/Documentos/ABIChallenge_yasser-azan/mlruns/274137987748593680/2f15444fd26d40ee901c516b00555d46/artifacts,2024-06-05 17:17:27.854000+00:00,,P1,v1,run from client 2
+7b7a3bbb75ac4c27b4dda33aa7826744,274137987748593680,RUNNING,file:///home/yasser/Documentos/ABIChallenge_yasser-azan/mlruns/274137987748593680/7b7a3bbb75ac4c27b4dda33aa7826744/artifacts,2024-06-05 17:13:10.502000+00:00,,P1,v1,run from client 2
